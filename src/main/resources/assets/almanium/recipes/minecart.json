@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"I I",
+		"III"
+	],
+	"key": {
+		"I": {
+			"item": "almanium:almanium_ingot"
+		}
+	},
+	"result": {
+		"item": "minecraft:minecart",
+		"count": 1
+	}
+}
