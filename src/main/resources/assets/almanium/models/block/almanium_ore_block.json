@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "almanium:blocks/almanium_ore_block"
+	}
+}

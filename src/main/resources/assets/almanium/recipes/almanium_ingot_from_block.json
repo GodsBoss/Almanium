@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "almanium:almanium_block"
+		}
+	],
+	"result": {
+		"item": "almanium:almanium_ingot",
+		"count": 9
+	}
+}

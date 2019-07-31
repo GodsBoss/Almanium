@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"nnn",
+		"nnn",
+		"nnn"
+	],
+	"key": {
+		"n": {
+			"item": "almanium:almanium_nugget"
+		}
+	},
+	"result": {
+		"item": "almanium:almanium_ingot",
+		"count": 1
+	}
+}
