@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"ii",
+		" s",
+		" s"
+	],
+	"key": {
+		"i": {
+			"item": "almanium:almanium_ingot"
+		},
+		"s": {
+			"item": "minecraft:stick"
+		}
+	},
+	"result": {
+		"item": "almanium:almanium_hoe",
+		"count": 1
+	}
+}
