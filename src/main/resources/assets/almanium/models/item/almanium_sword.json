@@ -1,6 +1,6 @@
 {
 	"parent": "item/handheld",
 	"textures": {
-		"layer0": "almanium:item/almanium_sword"
+		"layer0": "almanium:items/almanium_sword"
 	}
 }
