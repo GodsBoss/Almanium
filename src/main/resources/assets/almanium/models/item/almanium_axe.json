@@ -1,6 +1,6 @@
 {
 	"parent": "item/handheld",
 	"textures": {
-		"layer0": "almnium:item/almanium_axe"
+		"layer0": "almanium:item/almanium_axe"
 	}
 }
