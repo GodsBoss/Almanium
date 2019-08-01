@@ -13,6 +13,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemHoe;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
@@ -24,6 +25,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -48,6 +50,12 @@ public class AlmaniumMod {
 	{
 		Blocks.populate();
 		Items.populate();
+
+		GameRegistry.addSmelting(Items.AlmaniumAxe, new ItemStack(Items.AlmaniumNugget), 0.1f);
+		GameRegistry.addSmelting(Items.AlmaniumHoe, new ItemStack(Items.AlmaniumNugget), 0.1f);
+		GameRegistry.addSmelting(Items.AlmaniumPickaxe, new ItemStack(Items.AlmaniumNugget), 0.1f);
+		GameRegistry.addSmelting(Items.AlmaniumShovel, new ItemStack(Items.AlmaniumNugget), 0.1f);
+		GameRegistry.addSmelting(Items.AlmaniumSword, new ItemStack(Items.AlmaniumNugget), 0.1f);
 	}
 
 	@EventHandler
