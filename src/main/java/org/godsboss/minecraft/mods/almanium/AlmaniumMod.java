@@ -2,6 +2,7 @@ package org.godsboss.minecraft.mods.almanium;
 
 import org.godsboss.minecraft.mods.almanium.blocks.AlmaniumBlock;
 import org.godsboss.minecraft.mods.almanium.blocks.AlmaniumOreBlock;
+import org.godsboss.minecraft.mods.almanium.items.Axe;
 import org.godsboss.minecraft.mods.almanium.items.Pickaxe;
 import org.godsboss.minecraft.mods.almanium.proxies.Proxy;
 
@@ -120,6 +121,7 @@ public class AlmaniumMod {
 				setRegistryName(Blocks.AlmaniumOreBlockName);
 
 			// Tools and weapons
+			AlmaniumAxe = new Axe();
 			AlmaniumPickaxe = new Pickaxe();
 
 			// Armor
@@ -143,6 +145,7 @@ public class AlmaniumMod {
 				AlmaniumOreBlock,
 
 				// Tools and weapons
+				AlmaniumAxe,
 				AlmaniumPickaxe,
 
 				// Armor
@@ -161,6 +164,7 @@ public class AlmaniumMod {
 			setCustomModelResourceLocation(AlmaniumOreBlock);
 
 			// Tools and weapons
+			setCustomModelResourceLocation(AlmaniumAxe);
 			setCustomModelResourceLocation(AlmaniumPickaxe);
 
 			// Armor
