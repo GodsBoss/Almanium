@@ -13,6 +13,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemHoe;
+import net.minecraft.item.ItemSword;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
@@ -129,6 +130,9 @@ public class AlmaniumMod {
 				setUnlocalizedName(AlmaniumHoeName);
 			AlmaniumPickaxe = new Pickaxe();
 			AlmaniumShovel = new Shovel();
+			AlmaniumSword = (new ItemSword(Item.ToolMaterial.IRON)).
+				setRegistryName(AlmaniumSwordName).
+				setUnlocalizedName(AlmaniumSwordName);
 
 			// Armor
 
@@ -155,6 +159,7 @@ public class AlmaniumMod {
 				AlmaniumHoe,
 				AlmaniumPickaxe,
 				AlmaniumShovel,
+				AlmaniumSword,
 
 				// Armor
 
@@ -176,6 +181,7 @@ public class AlmaniumMod {
 			setCustomModelResourceLocation(AlmaniumHoe);
 			setCustomModelResourceLocation(AlmaniumPickaxe);
 			setCustomModelResourceLocation(AlmaniumShovel);
+			setCustomModelResourceLocation(AlmaniumSword);
 
 			// Armor
 
