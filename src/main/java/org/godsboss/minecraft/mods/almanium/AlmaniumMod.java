@@ -78,7 +78,7 @@ public class AlmaniumMod {
 
 		public static void populate() {
 			AlmaniumBlock = new AlmaniumBlock();
-			AlmaniumOreBlock = new AlmaniumOreBlock();
+			AlmaniumOreBlock = new AlmaniumOreBlock(AlmaniumOreBlockName);
 		}
 
 		@SubscribeEvent
