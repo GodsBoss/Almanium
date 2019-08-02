@@ -63,6 +63,7 @@ public class AlmaniumMod {
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
+		GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
 	}
 
 	@EventHandler
