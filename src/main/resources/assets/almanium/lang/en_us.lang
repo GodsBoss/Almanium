@@ -10,4 +10,5 @@ item.almanium_pickaxe.name=Almanium Pickaxe
 item.almanium_shovel.name=Almanium Shovel
 item.almanium_sword.name=Almanium Sword
 tile.almanium_block.name=Block of Almanium
+tile.almanium_netherrack_ore_block.name=Almanium Nether Ore
 tile.almanium_ore_block.name=Almanium Ore

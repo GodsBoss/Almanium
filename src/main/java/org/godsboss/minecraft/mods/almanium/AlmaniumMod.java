@@ -51,6 +51,7 @@ public class AlmaniumMod {
 		Blocks.populate();
 		Items.populate();
 
+		GameRegistry.addSmelting(Items.AlmaniumNetherrackOreBlock, new ItemStack(Items.AlmaniumIngot), 0.7f);
 		GameRegistry.addSmelting(Items.AlmaniumOreBlock, new ItemStack(Items.AlmaniumIngot), 0.7f);
 		GameRegistry.addSmelting(Items.AlmaniumAxe, new ItemStack(Items.AlmaniumNugget), 0.1f);
 		GameRegistry.addSmelting(Items.AlmaniumHoe, new ItemStack(Items.AlmaniumNugget), 0.1f);
@@ -72,12 +73,15 @@ public class AlmaniumMod {
 	@Mod.EventBusSubscriber(modid = AlmaniumMod.MODID)
 	public static class Blocks {
 		public static final String AlmaniumBlockName = "almanium_block";
+		public static final String AlmaniumNetherrackOreBlockName = "almanium_netherrack_ore_block";
 		public static final String AlmaniumOreBlockName = "almanium_ore_block";
 		public static Block AlmaniumBlock;
+		public static Block AlmaniumNetherrackOreBlock;
 		public static Block AlmaniumOreBlock;
 
 		public static void populate() {
 			AlmaniumBlock = new AlmaniumBlock();
+			AlmaniumNetherrackOreBlock = new AlmaniumOreBlock(AlmaniumNetherrackOreBlockName);
 			AlmaniumOreBlock = new AlmaniumOreBlock(AlmaniumOreBlockName);
 		}
 
@@ -85,6 +89,7 @@ public class AlmaniumMod {
 		public static void register(RegistryEvent.Register<Block> event) {
 			event.getRegistry().registerAll(
 				AlmaniumBlock,
+				AlmaniumNetherrackOreBlock,
 				AlmaniumOreBlock
 			);
 		}
@@ -95,6 +100,7 @@ public class AlmaniumMod {
 		// Blocks
 		// No names, they use the same names as the corresponding blocks.
 		public static Item AlmaniumBlock;
+		public static Item AlmaniumNetherrackOreBlock;
 		public static Item AlmaniumOreBlock;
 
 		// Tools and weapons
@@ -129,6 +135,8 @@ public class AlmaniumMod {
 			// Blocks
 			AlmaniumBlock = (new ItemBlock(Blocks.AlmaniumBlock)).
 				setRegistryName(Blocks.AlmaniumBlockName);
+			AlmaniumNetherrackOreBlock = (new ItemBlock(Blocks.AlmaniumNetherrackOreBlock)).
+				setRegistryName(Blocks.AlmaniumNetherrackOreBlockName);
 			AlmaniumOreBlock = (new ItemBlock(Blocks.AlmaniumOreBlock)).
 				setRegistryName(Blocks.AlmaniumOreBlockName);
 
@@ -161,6 +169,7 @@ public class AlmaniumMod {
 			event.getRegistry().registerAll(
 				// Blocks
 				AlmaniumBlock,
+				AlmaniumNetherrackOreBlock,
 				AlmaniumOreBlock,
 
 				// Tools and weapons
@@ -183,6 +192,7 @@ public class AlmaniumMod {
 		public static void registerRenders(ModelRegistryEvent event) {
 			// Blocks
 			setCustomModelResourceLocation(AlmaniumBlock);
+			setCustomModelResourceLocation(AlmaniumNetherrackOreBlock);
 			setCustomModelResourceLocation(AlmaniumOreBlock);
 
 			// Tools and weapons

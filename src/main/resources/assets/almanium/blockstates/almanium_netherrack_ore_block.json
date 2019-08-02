@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "normal": [
+            { "model": "almanium:almanium_netherrack_ore_block" }
+        ]
+    }
+}
