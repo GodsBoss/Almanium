@@ -51,6 +51,7 @@ public class AlmaniumMod {
 		Blocks.populate();
 		Items.populate();
 
+		GameRegistry.addSmelting(Items.AlmaniumOreBlock, new ItemStack(Items.AlmaniumIngot), 0.7f);
 		GameRegistry.addSmelting(Items.AlmaniumAxe, new ItemStack(Items.AlmaniumNugget), 0.1f);
 		GameRegistry.addSmelting(Items.AlmaniumHoe, new ItemStack(Items.AlmaniumNugget), 0.1f);
 		GameRegistry.addSmelting(Items.AlmaniumPickaxe, new ItemStack(Items.AlmaniumNugget), 0.1f);
