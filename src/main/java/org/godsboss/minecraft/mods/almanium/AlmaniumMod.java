@@ -63,6 +63,7 @@ public class AlmaniumMod {
 		GameRegistry.addSmelting(Items.AlmaniumPickaxe, new ItemStack(Items.AlmaniumNugget), 0.1f);
 		GameRegistry.addSmelting(Items.AlmaniumShovel, new ItemStack(Items.AlmaniumNugget), 0.1f);
 		GameRegistry.addSmelting(Items.AlmaniumSword, new ItemStack(Items.AlmaniumNugget), 0.1f);
+		GameRegistry.addSmelting(Items.AlmaniumBoots, new ItemStack(Items.AlmaniumNugget), 0.1f);
 	}
 
 	@EventHandler
