@@ -10,13 +10,18 @@ import org.godsboss.minecraft.mods.almanium.proxies.Proxy;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.SoundEvents;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -153,6 +158,13 @@ public class AlmaniumMod {
 				setUnlocalizedName(AlmaniumSwordName);
 
 			// Armor
+			AlmaniumBoots = (new ItemArmor(
+				Materials.armor,
+				0,
+				EntityEquipmentSlot.FEET
+			)).
+				setRegistryName(AlmaniumBootsName).
+				setUnlocalizedName(AlmaniumBootsName);
 
 			// Miscellaneous
 			AlmaniumIngot = (new Item()).
@@ -181,6 +193,7 @@ public class AlmaniumMod {
 				AlmaniumSword,
 
 				// Armor
+				AlmaniumBoots,
 
 				// Miscellaneous
 				AlmaniumIngot,
@@ -204,6 +217,7 @@ public class AlmaniumMod {
 			setCustomModelResourceLocation(AlmaniumSword);
 
 			// Armor
+			setCustomModelResourceLocation(AlmaniumBoots);
 
 			// Miscellaneous
 			setCustomModelResourceLocation(AlmaniumIngot);
@@ -218,5 +232,17 @@ public class AlmaniumMod {
 				new ModelResourceLocation(item.getRegistryName(), "inventory")
 			);
 		}
+	}
+
+	public static class Materials {
+		public static ArmorMaterial armor = EnumHelper.addArmorMaterial(
+			"almanium",
+			"almanium:almanium",
+			15,
+			new int[] {2, 6, 5, 2},
+			9,
+			SoundEvents.ITEM_ARMOR_EQUIP_IRON,
+			0f
+		);
 	}
 }
