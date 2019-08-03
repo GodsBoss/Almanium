@@ -64,6 +64,9 @@ public class AlmaniumMod {
 		GameRegistry.addSmelting(Items.AlmaniumShovel, new ItemStack(Items.AlmaniumNugget), 0.1f);
 		GameRegistry.addSmelting(Items.AlmaniumSword, new ItemStack(Items.AlmaniumNugget), 0.1f);
 		GameRegistry.addSmelting(Items.AlmaniumBoots, new ItemStack(Items.AlmaniumNugget), 0.1f);
+		GameRegistry.addSmelting(Items.AlmaniumChestplate, new ItemStack(Items.AlmaniumNugget), 0.1f);
+		GameRegistry.addSmelting(Items.AlmaniumHelmet, new ItemStack(Items.AlmaniumNugget), 0.1f);
+		GameRegistry.addSmelting(Items.AlmaniumLeggings, new ItemStack(Items.AlmaniumNugget), 0.1f);
 	}
 
 	@EventHandler
@@ -166,6 +169,27 @@ public class AlmaniumMod {
 			)).
 				setRegistryName(AlmaniumBootsName).
 				setUnlocalizedName(AlmaniumBootsName);
+			AlmaniumChestplate = (new ItemArmor(
+				Materials.armor,
+				0,
+				EntityEquipmentSlot.CHEST
+			)).
+				setRegistryName(AlmaniumChestplateName).
+				setUnlocalizedName(AlmaniumChestplateName);
+			AlmaniumHelmet = (new ItemArmor(
+				Materials.armor,
+				0,
+				EntityEquipmentSlot.HEAD
+			)).
+				setRegistryName(AlmaniumHelmetName).
+				setUnlocalizedName(AlmaniumHelmetName);
+			AlmaniumLeggings = (new ItemArmor(
+				Materials.armor,
+				0,
+				EntityEquipmentSlot.LEGS
+			)).
+				setRegistryName(AlmaniumLeggingsName).
+				setUnlocalizedName(AlmaniumLeggingsName);
 
 			// Miscellaneous
 			AlmaniumIngot = (new Item()).
@@ -195,6 +219,9 @@ public class AlmaniumMod {
 
 				// Armor
 				AlmaniumBoots,
+				AlmaniumChestplate,
+				AlmaniumHelmet,
+				AlmaniumLeggings,
 
 				// Miscellaneous
 				AlmaniumIngot,
@@ -219,6 +246,9 @@ public class AlmaniumMod {
 
 			// Armor
 			setCustomModelResourceLocation(AlmaniumBoots);
+			setCustomModelResourceLocation(AlmaniumChestplate);
+			setCustomModelResourceLocation(AlmaniumHelmet);
+			setCustomModelResourceLocation(AlmaniumLeggings);
 
 			// Miscellaneous
 			setCustomModelResourceLocation(AlmaniumIngot);

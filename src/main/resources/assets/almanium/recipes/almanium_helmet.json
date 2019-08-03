@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"iii",
+		"i i"
+	],
+	"key": {
+		"i": {
+			"item": "almanium:almanium_ingot"
+		}
+	},
+	"result": {
+		"item": "almanium:almanium_helmet",
+		"count": 1
+	}
+}
