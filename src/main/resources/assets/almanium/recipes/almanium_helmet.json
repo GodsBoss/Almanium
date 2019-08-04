@@ -6,7 +6,8 @@
 	],
 	"key": {
 		"i": {
-			"item": "almanium:almanium_ingot"
+			"type": "forge:ore_dict",
+			"ore": "ingotAlmanium"
 		}
 	},
 	"result": {
