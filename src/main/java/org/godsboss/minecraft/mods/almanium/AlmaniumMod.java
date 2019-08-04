@@ -33,6 +33,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.oredict.OreDictionary;
 
 @Mod(
 	modid = AlmaniumMod.MODID,
@@ -73,6 +74,7 @@ public class AlmaniumMod {
 	public void init(FMLInitializationEvent event)
 	{
 		GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
+		OreDictionary.registerOre("ingotAlmanium", Items.AlmaniumIngot);
 	}
 
 	@EventHandler
